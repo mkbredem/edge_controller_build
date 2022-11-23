@@ -4,13 +4,17 @@
 #   - Update Credential for Insights Inventory with Red Hat account.
 #   - Add variables for system_roles. https://console.redhat.com/ansible/automation-hub/repo/published/redhat/rhel_system_roles
 controller_components:
-  # - projects
+  - projects
   # - credential_types
   # - credentials
   # - inventory_sources
   - job_templates
 
-# controller_projects:
+controller_projects:
+  - name: rhel-fleet-management
+    organization: Default
+    scm_type: git
+    scm_url: 'https://github.com/Red-Hat-SE-RTO/rhel-fleet-management'
   # - name: Fact Scan
   #   organization: Default
   #   scm_type: git
