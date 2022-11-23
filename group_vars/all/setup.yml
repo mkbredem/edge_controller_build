@@ -11,6 +11,11 @@ controller_components:
   - job_templates
 
 controller_projects:
+  - name: EDGE / rhel-fleet-management-role
+    organization: Default
+    scm_type: git
+    scm_url: 'https://github.com/Red-Hat-SE-RTO/rhel-edge-management-role'
+
   - name: EDGE / rhel-fleet-management
     organization: Default
     scm_type: git
@@ -48,18 +53,9 @@ controller_credentials:
     organization: Default
     inputs: 
       username: "svc-gitea"
-      password: test
-      # password: "ASK"
-      # become_method: "sudo"
-      # become_username: "root"
+      password: git3ap@33w0rd
 
-  # - name: Insights Inventory
-  #   credential_type: Insights Collection
-  #   organization: Default
-  #   inputs:
-  #     insights_user: REPLACEME
-  #     insights_password: REPLACEME
-
+# EXAMPLE:
 # controller_inventory_sources:
   # - name: Insights Inventory
   #   inventory: Workshop Inventory
