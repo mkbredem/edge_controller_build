@@ -39,6 +39,7 @@ controller_credentials:
     inputs: 
       username: lab-user
       password: test
+      organization: Default
       # password: "ASK"
       become_method: "sudo"
       become_username: "root"
@@ -48,6 +49,7 @@ controller_credentials:
     inputs: 
       username: "svc-gitea"
       password: test
+      organization: Default
       # password: "ASK"
       # become_method: "sudo"
       # become_username: "root"
