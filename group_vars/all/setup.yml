@@ -36,20 +36,20 @@ controller_projects:
 controller_credentials:
   - name: "EDGE hypervisor from opentlc"
     credential_type: Machine
+    organization: Default
     inputs: 
       username: lab-user
       password: test
-      organization: Default
       # password: "ASK"
       become_method: "sudo"
       become_username: "root"
 
   - name: "EDGE gitea"
     credential_type: Source Control
+    organization: Default
     inputs: 
       username: "svc-gitea"
       password: test
-      organization: Default
       # password: "ASK"
       # become_method: "sudo"
       # become_username: "root"
