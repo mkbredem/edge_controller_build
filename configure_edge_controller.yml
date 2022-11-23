@@ -3,6 +3,8 @@
   gather_facts: no
   vars:
     controller_validate_certs: false
+    controller_configuration_credentials_secure_logging: false
+    controller_configuration_secure_logging: false
 
   tasks:
     - name: Setup Components
