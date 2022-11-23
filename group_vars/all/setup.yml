@@ -6,19 +6,15 @@
 controller_components:
   - projects
   # - credential_types
-  # - credentials
+  - credentials
   # - inventory_sources
   - job_templates
 
 controller_projects:
-  - name: rhel-fleet-management
+  - name: EDGE / rhel-fleet-management
     organization: Default
     scm_type: git
     scm_url: 'https://github.com/Red-Hat-SE-RTO/rhel-fleet-management'
-  # - name: Fact Scan
-  #   organization: Default
-  #   scm_type: git
-  #   scm_url: 'https://github.com/ansible/awx-facts-playbooks.git'
 
 # controller_credential_types:
   # - name: "Insights Collection"
@@ -37,24 +33,22 @@ controller_projects:
   #       INSIGHTS_USER: "{% raw %}{  { insights_user  }}{% endraw %}"
   #       INSIGHTS_PASSWORD: "{% raw %}{  { insights_password  }}{% endraw %}"
 
-# controller_credentials:
-#   - name: "EDGE / hypervisor from opentlc.com"
-#     credential_type: Machine
-#     inputs: 
-#       username: lab-user
-#       password: test
-      # password: "ASK"
-      # become_method: "sudo"
-      # become_username: "root"
+controller_credentials:
+  - name: "EDGE / hypervisor from opentlc.com"
+    credential_type: Machine
+    inputs: 
+      username: lab-user
+      password: "ASK"
+      become_method: "sudo"
+      become_username: "root"
 
-  # - name: "EDGE / gitea"
-  #   credential_type: Source Control
-  #   inputs: 
-  #     username: "svc-getea"
-  #     password: test
-      # password: "ASK"
-      # become_method: "sudo"
-      # become_username: "root"
+  - name: "EDGE / gitea"
+    credential_type: Source Control
+    inputs: 
+      username: "svc-getea"
+      password: "ASK"
+      become_method: "sudo"
+      become_username: "root"
 
   # - name: Insights Inventory
   #   credential_type: Insights Collection
