@@ -5,9 +5,9 @@ user_message:
   - Add variables for system_roles. https://console.redhat.com/ansible/automation-hub/repo/published/redhat/rhel_system_roles
 controller_components:
   # - projects
-  - credential_types
+  # - credential_types
   - credentials
-  - inventory_sources
+  # - inventory_sources
   - job_templates
 
 # controller_projects:
@@ -16,7 +16,7 @@ controller_components:
   #   scm_type: git
   #   scm_url: 'https://github.com/ansible/awx-facts-playbooks.git'
 
-controller_credential_types:
+# controller_credential_types:
   # - name: "Insights Collection"
   #   kind: cloud
   #   inputs:
@@ -34,7 +34,7 @@ controller_credential_types:
   #       INSIGHTS_PASSWORD: "{% raw %}{  { insights_password  }}{% endraw %}"
 
 controller_credentials:
-  - name: "hypervisor from opentlc.com"
+  - name: "EDGE / hypervisor from opentlc.com"
     credential_type: "Machine"
     inputs: 
       username: lab-user
@@ -42,7 +42,7 @@ controller_credentials:
       become_method: "sudo"
       become_username: "root"
 
-  - name: gitea
+  - name: "EDGE / gitea"
     credential_type: "Source Control"
     inputs: 
       username: "svc-getea"
@@ -57,7 +57,7 @@ controller_credentials:
   #     insights_user: REPLACEME
   #     insights_password: REPLACEME
 
-controller_inventory_sources:
+# controller_inventory_sources:
   # - name: Insights Inventory
   #   inventory: Workshop Inventory
   #   source: scm
@@ -67,7 +67,7 @@ controller_inventory_sources:
 
 
 controller_templates:
-  - name: "KVM - Edge Image Build"
+  - name: "EDGE / KVM - Edge Image Build"
     job_type: run
     inventory: "Demo Inventory"
     project: "rhel-fleet-management"
