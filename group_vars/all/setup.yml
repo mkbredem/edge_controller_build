@@ -34,7 +34,7 @@ controller_projects:
   #       INSIGHTS_PASSWORD: "{% raw %}{  { insights_password  }}{% endraw %}"
 
 controller_credentials:
-  - name: "EDGE / hypervisor from opentlc.com"
+  - name: "EDGE hypervisor from opentlc"
     credential_type: Machine
     inputs: 
       username: lab-user
@@ -43,14 +43,14 @@ controller_credentials:
       become_method: "sudo"
       become_username: "root"
 
-  - name: "EDGE / gitea"
+  - name: "EDGE gitea"
     credential_type: Source Control
     inputs: 
-      username: "svc-getea"
+      username: "svc-gitea"
       password: test
       # password: "ASK"
-      become_method: "sudo"
-      become_username: "root"
+      # become_method: "sudo"
+      # become_username: "root"
 
   # - name: Insights Inventory
   #   credential_type: Insights Collection
