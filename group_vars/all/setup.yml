@@ -73,7 +73,7 @@ controller_templates:
   - name: "EDGE / KVM - Edge Image Build"
     job_type: run
     inventory: "Demo Inventory"
-    project: "rhel-fleet-management"
+    project: "EDGE / rhel-fleet-management"
     execution_environment: Default execution environment
     playbook: "site.yml"
     credentials:  
