@@ -35,7 +35,7 @@ controller_components:
 
 controller_credentials:
   - name: "EDGE / hypervisor from opentlc.com"
-    credential_type: "Machine"
+    credential_type: Machine
     inputs: 
       username: lab-user
       password: test
@@ -44,7 +44,7 @@ controller_credentials:
       become_username: "root"
 
   - name: "EDGE / gitea"
-    credential_type: "Source Control"
+    credential_type: Source Control
     inputs: 
       username: "svc-getea"
       password: test
