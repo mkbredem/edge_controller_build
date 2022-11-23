@@ -1,12 +1,12 @@
 ---
-user_message:
-  - Be sure to update the 'activation_key' and 'org_id' extra variables for 'LINUX / Register'. https://access.redhat.com/management/activation_keys
-  - Update Credential for Insights Inventory with Red Hat account.
-  - Add variables for system_roles. https://console.redhat.com/ansible/automation-hub/repo/published/redhat/rhel_system_roles
+# user_message:
+#   - Be sure to update the 'activation_key' and 'org_id' extra variables for 'LINUX / Register'. https://access.redhat.com/management/activation_keys
+#   - Update Credential for Insights Inventory with Red Hat account.
+#   - Add variables for system_roles. https://console.redhat.com/ansible/automation-hub/repo/published/redhat/rhel_system_roles
 controller_components:
   # - projects
   # - credential_types
-  - credentials
+  # - credentials
   # - inventory_sources
   - job_templates
 
@@ -33,21 +33,21 @@ controller_components:
   #       INSIGHTS_USER: "{% raw %}{  { insights_user  }}{% endraw %}"
   #       INSIGHTS_PASSWORD: "{% raw %}{  { insights_password  }}{% endraw %}"
 
-controller_credentials:
-  - name: "EDGE / hypervisor from opentlc.com"
-    credential_type: Machine
-    inputs: 
-      username: lab-user
-      password: test
+# controller_credentials:
+#   - name: "EDGE / hypervisor from opentlc.com"
+#     credential_type: Machine
+#     inputs: 
+#       username: lab-user
+#       password: test
       # password: "ASK"
       # become_method: "sudo"
       # become_username: "root"
 
-  - name: "EDGE / gitea"
-    credential_type: Source Control
-    inputs: 
-      username: "svc-getea"
-      password: test
+  # - name: "EDGE / gitea"
+  #   credential_type: Source Control
+  #   inputs: 
+  #     username: "svc-getea"
+  #     password: test
       # password: "ASK"
       # become_method: "sudo"
       # become_username: "root"
