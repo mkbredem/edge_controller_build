@@ -38,7 +38,8 @@ controller_credentials:
     credential_type: Machine
     inputs: 
       username: lab-user
-      password: "ASK"
+      password: test
+      # password: "ASK"
       become_method: "sudo"
       become_username: "root"
 
@@ -46,7 +47,8 @@ controller_credentials:
     credential_type: Source Control
     inputs: 
       username: "svc-getea"
-      password: "ASK"
+      password: test
+      # password: "ASK"
       become_method: "sudo"
       become_username: "root"
 
