@@ -14,12 +14,12 @@ controller_projects:
   - name: EDGE / rhel-fleet-management-role
     organization: Default
     scm_type: git
-    scm_url: 'https://github.com/Red-Hat-SE-RTO/rhel-edge-management-role'
+    scm_url: 'http://{{gitea_server_ip}}:3000/svc-gitea/rhel-edge-management-role.git'
 
   - name: EDGE / rhel-fleet-management
     organization: Default
     scm_type: git
-    scm_url: 'https://github.com/Red-Hat-SE-RTO/rhel-fleet-management'
+    scm_url: 'http://{{gitea_server_ip}}:3000/svc-gitea/rhel-fleet-management.git'
 
 # controller_credential_types:
   # - name: "Insights Collection"
